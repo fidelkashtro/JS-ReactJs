@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+x = 5;
+y = 6;
+z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+
+////////////////////
+console.log("hello Javascript")
+for(var i=1;i<=10;i++){
+	for(var j=1;j<=i;j++)
+	{
+		document.write("<b>*</b>");
+	}
+	document.write("</br>");
+}
+
+//////////////
+</script>
+
+<script>
+		console.log("hello Javascript")
+		for(var i=1;i<=10;i++){
+			for(var j=1;j<=i;j++)
+			{
+				document.write("<b style='font-size:30px'>*</b>");
+			}
+			document.write("</br>");
+		}
+	</script>
+
+
+<script>
+			var i = 1; // initialisation
+
+			while(i<=10){//condition
+
+				console.log(i);
+
+				i++;//inc or dec
+
+			}
+
+			for(var j=1;j<=10;j++){
+				console.log(j)
+			}
+		</script>
+
+
+ <script>
+        
+        
+        function add(a,b,c){
+            var x = a+b;
+            c(x);
+        }//first-class-functions
+
+        add(12,23,function(res){console.log(res)});
+        
+        function sub(x,y,z){            
+            z(x-y);
+        }
+
+        sub(19,2,function(res){console.log(res)});
+
+        function multiply(a,b,c){
+            c(a*b)
+        }
+
+        multiply(12,5,function(res){console.log(res)})
+
+        function div(a,b,c){
+            if(b===0){
+                c("Denominator cannot be zero",null)
+            }
+            else{
+                c(null,a/b);
+            }
+        }
+
+        
+    </script>
+
+    <p id="demo1"></p>
+
+<script>
+let person = "John Doe",
+carName = "Volvo",
+price = 200;
+document.getElementById("demo1").innerHTML = carName;
+</script>
+
+
+<p id="demo2"></p>
+
+<script>
+// Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Change a property:
+car.color = "red";
+
+// Add a property:
+car.owner = "Johnson";
+
+// Display the property:
+document.getElementById("demo2").innerHTML = "Car owner is " + car.owner; 
+</script>
+
+
+<p id="demo3"></p>
+
+<script>
+// Assign the value 5 to x
+let x = 5;
+// Assign the value 2 to y
+let y = 2;
+// Assign the value x + y to z
+let z = x + y;
+// Display z
+document.getElementById("demo3").innerHTML = "The sum of x + y is: " + z;
+</script>
+
+
+<p id="demo3"></p>
+
+<script>
+let p = 10;
+x -= 5;
+document.getElementById("demo").innerHTML = "Value of x is: " + p;
+</script>
+
+<script>
+// Data Types
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
+
+// console.log(typeof true);
+console.log(typeof javascriptIsFun);
+// console.log(typeof 23);
+// console.log(typeof 'Jonas');
+
+javascriptIsFun = 'YES!';
+console.log(typeof javascriptIsFun);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1991;
+console.log(typeof year);
+
+console.log(typeof null);
+
+////////////////////////////////////
+// let, const and var
+let age = 30;
+age = 31;
+
+const birthYear = 1991;
+// birthYear = 1990;
+// const job;
+
+var job = 'programmer';
+job = 'teacher'
+
+var lastName = 'Schmedtmann';
+console.log(lastName);
+
+// Basic Operators
+// Math operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+
+const firstName1 = 'Jonas';
+const lastName1 = 'Schmedtmann';
+console.log(firstName1 + ' ' + lastName1);
+
+// Assignment operators
+let q = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1
+x--;
+x--;
+console.log(q);
+
+// Comparison operators
+console.log(ageJonas > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
+
+////////////////////////////////////
+// Operator Precedence
+const now1 = 2037;
+const ageJonas1 = now - 1991;
+const ageSarah1 = now - 2018;
+
+console.log(now - 1991 > now - 2018);
+
+let x1, y1;
+x1 = y1 = 25 - 10 - 5; // x = y = 10, x = 10
+console.log(x1, y1);
+
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge);
+
+
+//  Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
+
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const markHigherBMI = BMIMark > BMIJohn;
+
+console.log(BMIMark, BMIJohn, markHigherBMI);
+
+// Strings and Template Literals
+const firstName = 'Jonas';
+const job1 = 'teacher';
+const birthYear1 = 1991;
+const year1 = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year1 - birthYear1) + ' year old ' + job1 + '!';
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName}, a ${year1 - birthYear1} year old ${job1}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+console.log('String with \n\
+multiple \n\
+lines');
+
+console.log(`String
+multiple
+lines`);
+
+
+// Taking Decisions: if / else Statements
+const age1 = 15;
+
+if (age1 >= 18) {
+  console.log('Sarah can start driving license');
+} else {
+  const yearsLeft = 18 - age1;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear12 = 2012;
+
+let century;
+if (birthYear12 <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+
+
+
+// The switch Statement
+const day = 'friday';
+
+switch (day) {
+  case 'monday': // day === 'monday'
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+    break;
+  case 'tuesday':
+    console.log('Prepare theory videos');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write code examples');
+    break;
+  case 'friday':
+    console.log('Record videos');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the weekend :D');
+    break;
+  default:
+    console.log('Not a valid day!');
+}
+
+if (day === 'monday') {
+  console.log('Plan course structure');
+  console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+  console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('Write code examples');
+} else if (day === 'friday') {
+  console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the weekend :D');
+} else {
+  console.log('Not a valid day!');
+}
+
+
+
+</script>
+
+<script>
+  var i = 1; // initialisation
+
+  while(i<=10){//condition
+
+    console.log(i);
+
+    i++;//inc or dec
+
+  }
+
+  for(var j=1;j<=10;j++){
+    console.log(j)
+  }
+</script>
+
+
+<div id="d1">
+
+</div>
+<button onclick="colorit('red')">Red</button>
+<button onclick="colorit('green')">Green</button>
+<button onclick="colorit('blue')">Blue</button>
+<script>
+   function colorit(c){
+       var x = document.getElementById("d1");
+       x.style.backgroundColor = c;
+   }
+</script>
+
+<script>
+  var i;
+  for(i=1;i<=10;i=i+1)
+  {
+  console.log(i);
+  }
+  </script>
+
+<script>
+  var i;
+  for(i=10;i>0;i=i-1){
+  console.log(i);
+  }
+  </script>
+
+<script>
+  var i;
+  for(i=1;i<=10;i=i+1){
+  if(i%2===0){
+  console.log(i);
+  }
+  }
+  </script>
+
+<script>
+  var x3=350,y3=550,z3=250;
+  if(x3>y3){
+  if(x3>z3){
+  console.log(x3);
+  }
+  else{
+  console.log(z3);
+  }
+  }
+  else{
+  if(y>z){
+  console.log(y3);
+  }
+  else{
+  console.log(z3);
+  }
+  }
+  </script>
+
+<style>
+  #d1{
+    width:300px;
+    height:200px;
+    border:2px solid black;
+  }
+</style>
+
+<button id="d1" onclick="abc()"></button>
+<script>
+var mydiv= document.getElementById("d1");
+    var c=localStorage.getItem("s");
+    mydiv.style.backgroundColor=c;
+    var d=localStorage.getItem("t");
+    d1.innerHTML=d;
+  function abc(){
+    if(mydiv.style.backgroundColor==='green'){
+      mydiv.style.backgroundColor='white';
+      d1.innerHTML="white"
+      localStorage.setItem("s",mydiv.style.backgroundColor);
+      localStorage.setItem("t",d1.innerHTML);
+    }
+    else{
+      mydiv.style.backgroundColor='green';
+      d1.innerHTML="green"
+      localStorage.setItem("s",mydiv.style.backgroundColor);
+      localStorage.setItem("t",d1.innerHTML);
+    }
+  }
+</script>
+
+<script>        
+  var ar=[11,12,13,14,15,16,17,18,19];
+  document.write("The given array is ["+ar+"]<br><br>");
+  document.write("(a) From starting element to the last element<br>");
+  for(i=0;i<=ar.length-1;i++){
+      document.write(ar[i]+"<br>");
+  }
+  document.write("<br>(b) From last element to the starting element<br>");
+  for(j=ar.length-1;j>=0;j--){
+      document.write(ar[j]+"<br>");
+  }
+</script>
+
+
+<script>
+  var i=-96;
+  if(i>=0){
+  console.log("it is a positive number");
+  }
+  else{
+  console.log("it is a negative number");
+  }
+  </script>
+
+</body>
+</html>
+
+

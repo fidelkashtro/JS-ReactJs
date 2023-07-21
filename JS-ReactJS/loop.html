@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+for (let variable = 0; variable <= 10; variable++) {
+  console.log(variable);
+}
+
+
+// For in loop on object
+const object = {
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
+};
+
+for (let key in object) {
+  console.log(key);
+  console.log(object[key]);
+}
+
+// For in loop on array (NOT RECOMMENDED)
+const array = [1, 2, 3, 4, 5];
+for (const index in array) {
+  console.log(index);
+  console.log(array[index]);
+}
+
+
+// For of loop on array
+const array1 = [1, 2, 3, 4, 5];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// For of loop on object (NOT RECOMMENDED)
+
+// Object.keys(objectName) > key > objectName[key] > value
+const object1 = {
+  key1: "value1",
+  key2: "value2",
+};
+for (const key of Object.keys(object1)) {
+  console.log(object1[key]);
+}
+
+// While Loop
+
+
+let variable = 0;
+while (variable <= 10) {
+  console.log(variable);
+  variable++;
+}
+
+</script>
+
+</body>
+</html>
