@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h2>Finding the minimum among array elements</h2>
+    </body>
+    <script>
+        var ar=[133,200,3,426,5,4446,20,],min=ar[0];
+        document.write("The given array is ["+ar+"]<br><br>");
+        for (i=1; i<=ar.length-1;i++){
+            if (min>ar[i]) {
+                min=ar[i];
+            }
+        }
+        document.write("The minimum number is "+min+'<br>');
+    </script>
+</html>
