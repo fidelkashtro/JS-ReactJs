@@ -1,0 +1,42 @@
+
+<html>
+
+<head>
+  <script>
+    console.log('create-students object');
+
+const Students = {
+  name: 'student1',
+  age: 35,
+  rank: 5,
+  country: 'India',
+}
+
+const Address = {
+  street: 'student2',
+  city: 'GUNTUR',
+  pinCode: 123458,
+  state: 'AP',
+  country: 'India',
+}
+
+function showObjectDetails(obj) {
+  for(let key in obj) {
+    console.log(key,' : ',obj[key]);
+  }
+}
+
+showObjectDetails(Students);
+console.log('----------');
+showObjectDetails(Address);
+   
+  </script>
+</head>
+
+<body>
+
+  <h1>create-students object</h1>
+
+</body>
+
+</html>
